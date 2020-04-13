@@ -48,5 +48,20 @@
         subsequently used for the Earthrise images.
       </p>
     </div>
+    <script>
+      const overlay = document.querySelector(".overlay");
+      const blue = 255;
+
+      function cycleBlue() {
+        if (blue === 0) {
+          blue = 255;
+        } else {
+          blue = blue - 1;
+        }
+        overlay.style.backgroundColor = "rgb(255, 255, " + blue + ")";
+      }
+
+      setInterval(cycleBlue, 10);
+    </script>
   </body>
 </html>
